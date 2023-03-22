@@ -225,5 +225,18 @@ export class Quote extends Base {
       gasPriceWei,
       simulationStatus
     );
+
+    return {
+      routeAmounts,
+      quote,
+      quoteGasAdjusted,
+      estimatedGasUsedQuoteToken,
+      estimatedGasUsedUSD,
+      methodParameters,
+      blockNumber,
+      estimatedGasUsed,
+      gasPriceWei,
+      simulationStatus
+    }
   }
 }

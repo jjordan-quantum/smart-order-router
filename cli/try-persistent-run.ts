@@ -30,6 +30,7 @@ const quoter = new Quote();
       amount: '20000',
       exactIn: true,
       exactOut: false,
+      recipient: '0x6b8fA3E8E2FDABC3d9Cd5985Ee294aa44B82B351',
       chainId: ChainId.ARBITRUM_ONE,
       debug: true,
       debugJSON: false,

@@ -60,6 +60,7 @@ export class Quote extends Base {
       forceCrossProtocol,
       forceMixedRoutes,
       simulate,
+      slippagePercent,
     } = flags;
 
     const topNSecondHopForTokenAddress = new MapWithLowerCaseKey();
@@ -129,7 +130,7 @@ export class Quote extends Base {
             type: SwapType.UNIVERSAL_ROUTER,
             deadlineOrPreviousBlockhash: 10000000000000,
             recipient,
-            slippageTolerance: new Percent(5, 100),
+            slippageTolerance: new Percent(slippagePercent ? slippagePercent : 70, 100),
             simulate: simulate ? { fromAddress: recipient } : undefined,
           }
           : undefined,
@@ -165,7 +166,7 @@ export class Quote extends Base {
             type: SwapType.SWAP_ROUTER_02,
             deadline: 100,
             recipient,
-            slippageTolerance: new Percent(5, 10_000),
+            slippageTolerance: new Percent(slippagePercent ? slippagePercent : 70, 10_000),
           }
           : undefined,
         {

@@ -30,7 +30,7 @@ export class Quote extends Base {
     simulate: false,
   };
 
-  async run(flags: any) {
+  async run(flags: any): Promise<any> {
     console.log('=============================================================');
     console.log('------------------- STARTING RUN ---------------------------');
     console.log('=============================================================');

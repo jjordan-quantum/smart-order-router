@@ -230,6 +230,8 @@ export class Quote extends Base {
     return {
       routeAmounts,
       quote,
+      quoteAmountFixed: quote.toFixed(quote.currency.decimals),
+      quoteDecimals: quote.currency.decimals,
       quoteGasAdjusted,
       estimatedGasUsedQuoteToken,
       estimatedGasUsedUSD,

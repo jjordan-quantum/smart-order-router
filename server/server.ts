@@ -30,6 +30,11 @@ app.get('/', function(req: Request, res: Response) {
 app.post('/', async function(req: Request, res: Response) {
   console.log(req.body);
 
+  if(req.body && req.body.kill) {
+    console.log(`RECEIVED KILL REQUEST - STOPPING!`);
+    process.exit();
+  }
+
   if(quoterInitialized) {
     console.log('quoter initialized');
 

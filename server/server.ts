@@ -39,6 +39,8 @@ app.post('/', async function(req: Request, res: Response) {
       const {
         routeAmounts,
         quote,
+        quoteAmountFixed,
+        quoteDecimals,
         quoteGasAdjusted,
         estimatedGasUsedQuoteToken,
         estimatedGasUsedUSD,
@@ -52,6 +54,8 @@ app.post('/', async function(req: Request, res: Response) {
       res.send({
         routeAmounts,
         quote,
+        quoteAmountFixed,
+        quoteDecimals,
         quoteGasAdjusted,
         estimatedGasUsedQuoteToken,
         estimatedGasUsedUSD,
